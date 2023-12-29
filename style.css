@@ -178,3 +178,11 @@ input {
     margin-top: 26px;
     border-radius: 4px;
 }
+
+.thankyou-bg {
+    background-color: #ECFDF5;
+    color: #065F46;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 32px;
+}

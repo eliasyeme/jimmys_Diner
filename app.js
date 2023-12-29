@@ -7,8 +7,33 @@ document.addEventListener('click', (e) => {
         handleAddBtn(Number(e.target.dataset.add))
     } else if (e.target.dataset.remove) {
         handleRemoveBtn(e.target.dataset.remove)
+    } else if (e.target.id === 'order') {
+        handleOrderBtn()
+    } else if (e.target.id === 'submit') {
+        handleSubmitBtn(e)
     }
 })
+
+function handleSubmitBtn(e) {
+    e.preventDefault()
+    orderArray.splice(0, orderArray.length)
+    document.getElementById('popup').style.display = 'none'
+
+        const form = new FormData(document.querySelector('form'))
+        document.getElementById('order-section').innerHTML =
+        `
+            <section class="order-section thankyou-bg">
+                <p>Thanks, ${form.get('name')} Your order is on its way!</p>
+            </section>
+        `
+    setTimeout(() => {
+       render() 
+    }, 3000);
+}
+
+function handleOrderBtn() {
+    document.getElementById('popup').style.display = 'block'
+}
 
 function getMenuById(id) {
     const menuObj = menuArray.filter(menu => menu.id === id)[0]
@@ -45,7 +70,7 @@ function getOrderListHtml(orderList) {
             `
         })
         const orderHtml = `
-                <section class="order-section">
+                <section class="order-section" id="order-section">
                     <h2 class="order-title">Your order</h2>
                     <div class="orders">
                         ${orderListHtml}
@@ -55,7 +80,7 @@ function getOrderListHtml(orderList) {
                             <h3 class="order-price">$${orderArray.reduce((acc, curr) => acc + curr.price, 0)}</h3>
                         </div>
                     <div>
-                    <button class="primary-btn">Complete order</button>
+                    <button class="primary-btn" id="order">Complete order</button>
                 </section>
 
         `
@@ -91,6 +116,7 @@ function render() {
     if (orderArray.length) {
         html = [menuHtml, orderHtml].join('')
     }
+
 
     document.getElementById('app').innerHTML = html
 }

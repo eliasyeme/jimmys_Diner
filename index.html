@@ -18,6 +18,17 @@
         <main id="app">
         <!-- Food menus will render here -->
         </main>
+        <section class="popup-container">
+            <div class="popup">
+                <h2 class="popup-title">Enter card detail</h2>
+                <form>
+                    <input type="text" placeholder="Enter your name" required>
+                    <input type="text" pattern="[0-9]+" placeholder="Enter card number" title="0..9" required>
+                    <input type="text" pattern="[0-9]{3}" placeholder="Enter CVV" title="3 digit number">
+                    <button class="primary-btn submit-btn" id="submit">Pay</button>
+                </form>
+            </div>
+        </section>
     </div>
     <script src="app.js" type="module"></script>
 </body>

@@ -55,7 +55,7 @@ function getOrderListHtml(orderList) {
                             <h3 class="order-price">$${orderArray.reduce((acc, curr) => acc + curr.price, 0)}</h3>
                         </div>
                     <div>
-                    <button class="order-btn">Complete order</button>
+                    <button class="primary-btn">Complete order</button>
                 </section>
 
         `

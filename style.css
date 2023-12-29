@@ -21,6 +21,7 @@ h1, h2, h3, p {
 }
 
 .container {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -121,7 +122,7 @@ article {
     margin-bottom: 16px;
 }
 
-.order-btn {
+.primary-btn {
     font-weight: 700;
     font-size: 16px;
     margin-top: 52px;
@@ -129,4 +130,51 @@ article {
     padding: 18px 0;
     color: #fff;
     background-color: #16db99;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 600px;
+    height: 100%;
+    padding-top: 50%;
+}
+
+.popup {
+    margin: 0 auto;
+    width: 524px;
+    background-color: #fff;
+    padding: 32px 24px;
+    box-shadow: 0 0 250px #00000050;
+    border-radius: 4px;
+}
+
+.popup-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 42px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+input {
+    padding: 16px 26px;
+    font-size: 26px;
+}
+
+.submit-btn {
+    padding: 26px ;
+    font-size: 20px;
+    margin-top: 26px;
+    border-radius: 4px;
 }

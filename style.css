@@ -3,3 +3,130 @@ body {
     padding: 0;
     font-family: 'Smythe';
 }
+
+h1, h2, h3, p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.title {
+    margin: 0;
+    font-size: 36px;
+}
+
+.subtitle {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 22px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    padding: 46px;
+    background: no-repeat url('assets/bg_img.png');
+    color: #fff;
+}
+
+main {
+    padding: 0 46px;
+}
+
+article {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 52px 0;
+}
+
+.emoji {
+    font-size: 78px;
+    margin-right: 32px;
+}
+
+.menu-text {
+    flex-grow: 1;
+}
+
+.menu-name {
+    font-size: 28px;
+}
+
+.menu-ingredient {
+    color: #8b8b8b;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.menu-price {
+    font-size: 20px;
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+}
+
+.order-section {
+    padding: 24px 0;
+}
+
+.order-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 42px;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+}
+
+.order-text {
+    font-size: 28px;
+}
+
+.remove-order-btn {
+    font-size: 12px;
+    background-color: #fff;
+    border: none;
+    color: #bbb;
+    padding-top: 8px;
+}
+
+.order-price {
+    margin-left: auto;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #393333;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.order-btn {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 52px;
+    width: 100%;
+    padding: 18px 0;
+    color: #fff;
+    background-color: #16db99;
+}
